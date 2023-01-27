@@ -17,10 +17,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   $password = validate($_POST['password']);
 
 if(empty($username)) {
-  header("Location: index.php?erro=Имя пользователя обязательно");
+  header("Location: index.php?erro=Username is required");
   exit();
 } else if(empty($password)) {
-  header("Location: index.php?erro=Пароль обязателен");
+  header("Location: index.php?erro=Password is required");
     exit();
 }
 
@@ -37,7 +37,7 @@ if($row['username'] === $username && $row['password'] === $password) {
     header("Location: todos.php");
     exit();
 } else {
-  header("Location: index.php?erro=Неправильные данные");
+  header("Location: index.php?erro=error");
 }
 }else {
    header("Location: todos.php");
