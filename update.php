@@ -19,13 +19,13 @@
   <div class="container">
     <div class="row justify-content-center border my-3 py-3">
       <div class="col-12 pb-2">
-      <h2 class="text-center">Изменить пункт списка</h2>
+      <h2 class="text-center">Edit your todo</h2>
       </div>
       <div class="col-8">
       <input type="text" name="list" value="<?php echo $data['list']?>" class="form-control">
       </div>
       <div class="col-2">
-      <button class="btn btn-info">Редактировать</button>
+      <button class="btn btn-info">dit</button>
       <input type="hidden" name = "id" value="<?php echo $data['id']?>">
       </div>
     </div>
