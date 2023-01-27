@@ -34,13 +34,13 @@ $dataList = mysqli_query($conn, 'select * from todos');
   <div class="container">
     <div class="row justify-content-center border my-3 py-3">
       <div class="col-12 pb-2">
-      <h2 class="text-center text-white">Список дел для <?php echo $_SESSION['username']?></h2>
+      <h2 class="text-center text-white">Todo list for  <?php echo $_SESSION['username']?></h2>
       </div>
       <div class="col-8">
       <input type="text" name="list" class="form-control">
       </div>
       <div class="col-2">
-      <button class="btn btn-info">Добавить</button>
+      <button class="btn btn-info">Add</button>
       </div>
     </div>
   </div>
@@ -55,7 +55,7 @@ $dataList = mysqli_query($conn, 'select * from todos');
     <?php
     if (mysqli_num_rows($dataList) <= 0){
     ?>
-    <h4 class="text-white">Здесь еще пусто...</h4>
+    <h4 class="text-white">Nothing here yet...</h4>
     <?php }?>
   <!-- display todos -->
     <?php
@@ -70,8 +70,8 @@ $dataList = mysqli_query($conn, 'select * from todos');
         ?>
         </div>
         <div class="col-auto d-flex justify-content-end">
-          <a href ="delete.php? ID=<?php echo ($row['id']) ?>" class="btn btn-danger mr-2">Удалить</a>
-          <a href="update.php? ID=<?php echo ($row['id']) ?>" class="btn btn-success">Изменить</a>
+          <a href ="delete.php? ID=<?php echo ($row['id']) ?>" class="btn btn-danger mr-2">Delete</a>
+          <a href="update.php? ID=<?php echo ($row['id']) ?>" class="btn btn-success">Edit</a>
         </div>
         <?php
       } else{?>
@@ -82,8 +82,8 @@ $dataList = mysqli_query($conn, 'select * from todos');
         ?>
         </div>
         <div class="col-auto d-flex justify-content-end">
-          <a href ="delete.php? ID=<?php echo ($row['id']) ?>" class="btn btn-danger mr-2">Удалить</a>
-          <a href="update.php? ID=<?php echo ($row['id']) ?>" class="btn btn-success">Изменить</a>
+          <a href ="delete.php? ID=<?php echo ($row['id']) ?>" class="btn btn-danger mr-2">Delete</a>
+          <a href="update.php? ID=<?php echo ($row['id']) ?>" class="btn btn-success">Edit</a>
         </div>
 <?php
       }
