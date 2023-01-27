@@ -25,7 +25,7 @@
       <input type="text" name="list" value="<?php echo $data['list']?>" class="form-control">
       </div>
       <div class="col-2">
-      <button class="btn btn-info">dit</button>
+      <button class="btn btn-info">Edit</button>
       <input type="hidden" name = "id" value="<?php echo $data['id']?>">
       </div>
     </div>
